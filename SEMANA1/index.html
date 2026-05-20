@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>CSS 1 - INTRODUCCIÓN</title>
+
+<style type="text/css">
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* BOTÓN VOLVER (AHORA ABAJO) */
+.btn-volver{
+    display: block;
+    margin: 40px auto;
+    background: #ff66b2;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 0 10px #ff99cc;
+    transition: 0.3s;
+}
+
+.btn-volver:hover{
+    background: #ff99cc;
+    transform: scale(1.05);
+}
+
+#cuadrito1{
+    background-color: rgb(243, 241, 241);
+}
+#cuadrito2{
+    background-color: rgb(12, 12, 12);
+}
+#cuadrito1, #cuadrito2{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+#contenedor1, #contenedor2{
+    width: 1000px;
+    background-color: rgb(251, 250, 250);
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="contenedor1">
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+</div>
+
+<div id="contenedor2">
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+</div>
+
+<div id="contenedor1">
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+</div>
+
+<div id="contenedor2">
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+</div>
+
+<div id="contenedor1">
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+</div>
+
+<div id="contenedor2">
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+</div>
+
+<div id="contenedor1">
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+</div>
+
+<div id="contenedor2">
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+    <div id="cuadrito2"></div>
+    <div id="cuadrito1"></div>
+</div>
+
+
+<button onclick="volver()" class="btn-volver">⬅ VOLVER AL INICIO</button>
+
+<script>
+function volver() {
+    window.location.href = "../index.html";
+}
+</script>
+
+</body>
+</html>
