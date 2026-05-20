@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>TECNOLOGIA WEB</title>
+
+<style>
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:black;
+    flex-direction:column; 
+}
+
+.contenedor{
+    width:1000px;
+    height:300px;
+    position:relative;
+    border:3px solid white;
+    overflow:hidden;
+}
+.btn-volver{
+    margin-top:30px;
+    background: #ff66b2;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 0 10px #ff99cc;
+    transition: 0.3s;
+}
+
+.btn-volver:hover{
+    background: #ff99cc;
+    transform: scale(1.05);
+}
+
+.titulo{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(255,255,255,0.7);
+    padding:10px 25px;
+    border-radius:10px;
+    font-size:24px;
+    font-weight:bold;
+    font-family:Arial;
+    color:black;
+    z-index:10;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+
+    opacity:0;
+    animation: aparecerTitulo 2s forwards;
+    animation-delay:11s;
+}
+
+@keyframes aparecerTitulo{
+    from{
+        opacity:0;
+        transform:translateX(-50%) translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(-50%) translateY(0);
+    }
+}
+
+.marco1{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:0;
+    left:0;
+    animation:marco1 2s forwards;
+    background-image:url(img/HTML.jpg);
+    background-size:cover;
+}
+
+@keyframes marco1{
+    0%{ left:-200px; }
+    100%{ left:0; }
+}
+
+.marco2{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:0;
+    left:200px;
+    animation:marco2 2s forwards 2s;
+    background-image:url(img/PHP.jpg);
+    background-size:cover;
+}
+
+@keyframes marco2{
+    0%{ left:1000px; }
+    100%{ left:200px; }
+}
+
+.marco3{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:0;
+    left:400px;
+    animation:marco3 3s forwards 4s;
+    background-image:url(img/JAVASCRIPT.jpg);
+    background-size:cover;
+}
+
+@keyframes marco3{
+    0%{ left:1000px; }
+    100%{ left:400px; }
+}
+
+.marco4{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:0;
+    left:600px;
+    animation:marco4 3s forwards 6s;
+    background-image:url(img/CSS.jpg);
+    background-size:cover;
+}
+
+@keyframes marco4{
+    0%{ left:1000px; }
+    100%{ left:600px; }
+}
+
+.marco5{
+    width:200px;
+    height:300px;
+    position:absolute;
+    top:0;
+    left:800px;
+    animation:marco5 3s forwards 8s;
+    background-image:url(img/BOOSTRAP.jpg);
+    background-size:cover;
+}
+
+@keyframes marco5{
+    0%{ left:1000px; }
+    100%{ left:800px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+    <div class="marco1"></div>
+    <div class="marco2"></div>
+    <div class="marco3"></div>
+    <div class="marco4"></div>
+    <div class="marco5"></div>
+
+    <div class="titulo">TECNOLOGIA WEB</div>
+</div>
+
+<button onclick="volver()" class="btn-volver">⬅ VOLVER AL INICIO</button>
+
+<script>
+function volver() {
+    window.location.href = "../index.html";
+}
+</script>
+
+</body>
+</html>
