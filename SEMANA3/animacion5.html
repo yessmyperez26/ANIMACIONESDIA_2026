@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>Animacion 5</title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+.contenedor{
+width:400px;            
+height:200px;             
+border:1px solid white;  
+background:black;        
+position:relative;        /* permite mover elementos internos */
+margin:40px auto;         /* centra el contenedor */
+overflow:hidden;          /* oculta lo que salga del cuadro */
+}
+/* personaje */
+.cuadrito{
+width:100px;
+height:100px;
+position:absolute; /* posición fija dentro del contenedor */
+left:150px;        /* ubicación horizontal */
+top:50px;  
+        
+}
+/* Imagen del personaje */
+.cuadrito img{
+width:200px;
+height:100px;
+
+}
+@keyframes chica{
+    from{
+        rotate : 5 deg;
+    }
+    to{
+        rotate : 100 deg;
+    }
+}
+/* estrella  */
+.estrella{
+width:4px;              
+height:4px;
+background:white;   
+border-radius:50%;  /* círculo */
+position:absolute;
+animation:mover infinite linear;
+}
+/* 10 estrellas  */
+.e1{
+top:10px;
+left:400px;
+animation-duration:2s;
+}
+.e2{
+top:30px;
+left:500px;
+animation-duration:3s;
+}
+.e3{
+top:50px;
+left:450px;
+animation-duration:4s;
+}
+.e4{
+top:70px;
+left:550px;
+animation-duration:2.5s;
+}
+.e5{
+top:90px;
+left:600px;
+animation-duration:3.5s;
+}
+.e6{
+top:110px;
+left:430px;
+animation-duration:2.2s;
+}
+.e7{
+top:130px;
+left:520px;
+animation-duration:4s;
+}
+.e8{
+top:150px;
+left:580px;
+animation-duration:3s;
+}
+.e9{
+top:170px;
+left:470px;
+animation-duration:2.8s;
+}
+.e10{
+top:190px;
+left:650px;
+animation-duration:3.7s;
+}
+/* Movimiento de las estrellas */
+@keyframes mover{
+from{
+left:650px;/* empiezan a la derecha */
+}
+to{
+left:-20px; /* se mueven hacia la izquierda */
+}
+}
+</style>
+</head>
+<body>
+<div class="contenedor">
+<div class="estrella e1"></div>
+<div class="estrella e2"></div>
+<div class ="estrella e3"></div>
+<div class = "estrella e4 "></div>
+<div class =" estrella e5"></div>
+<div class = " estrella e6"></div>
+<div class = "estrella e7 "></div>
+<div class = "estrella e8 "></div>
+<div class = "estrella e9 "></div>
+<div class = "estrella e10 "></div>
+
+
+<div class="cuadrito">
+<img src="img/super.gif">
+</div>
+</div>
+</body>
+</html>

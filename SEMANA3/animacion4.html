@@ -1,0 +1,56 @@
+<html> 
+<head>
+    <title>ANIMACION 1</title>
+    <style>
+        *{
+            padding: 5px;
+            margin:0px;
+        }
+        .contenedor{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            position: relative;/*para centrar el div*/
+            margin: 0 auto; /*para centrar el div*/
+            overflow: hidden; /*muestra solo lo interior*/
+        }
+
+        .cuadrito{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(254, 253, 253);
+            position: absolute;/*permite mover el div dentro del contenedor*/
+            left:-500px;
+            top: 50px;
+            animation: cuadrito 3s infinite ease-in;
+        }
+
+
+        @keyframes cuadrito{
+            from{
+                left: -100;
+
+            }
+            to{
+                left: 500;
+
+
+            }
+        }
+        .cuadrito img{
+            width: 100px;
+            height: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+
+        <div class="cuadrito">
+            <img src ="img/megamanx.gif" alt = "">
+
+        </div>
+    </div>
+</body>
+</html>
