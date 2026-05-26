@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <title>Visita Perú </title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .contenedor{
+                width: 800px;
+                height: 300px;
+                position: relative;
+                margin: 0 auto;
+                border:1px solid black;
+                overflow: hidden;
+            }
+            .btn-volver{
+                display: block;
+                margin: 30px auto;
+                background: #ff66b2;
+                color: white;
+                border: none;
+                padding: 12px 22px;
+                border-radius: 12px;
+                cursor: pointer;
+                font-size: 16px;
+                box-shadow: 0 0 10px #ff99cc;
+                transition: 0.3s;
+            }
+
+            .btn-volver:hover{
+                background: #ff99cc;
+                transform: scale(1.05);
+            }
+            .marco1{
+                width: 200px;
+                height: 300px;
+                position:absolute;
+                top:0px;
+                left: 0px;
+                animation: marco1 2s 1 forwards;
+                background-image:url(img/mar.jpg);
+                background-size: cover;
+            }
+
+            @keyframes marco1{
+                0%{
+                    top: -300px;
+                    left: 0px;
+                    transform: rotateY(180deg);
+                }
+                50%{
+                    top: 300px;
+                    left: 0px;
+                }
+                100%{
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+
+            .marco2{
+                width: 200px;
+                height: 300px;
+                position:absolute;
+                top:-300px;
+                left: 200px;
+                animation: marco2 2s 1 forwards 2s;
+                background-image:url(img/costa.jpg);
+                background-size: cover;
+            }
+
+            @keyframes marco2{
+                0%{
+                    top: -300px;
+                    left: 200px;
+                    transform: rotateY(180deg);
+                }
+                50%{
+                    top: 300px;
+                    left: 200px;
+                }
+                100%{
+                    top: 0px;
+                    left: 200px;
+                }
+            }
+
+            .marco3{
+                width: 200px;
+                height: 300px;
+                position:absolute;
+                top:-300px;
+                left: 400px;
+                animation: marco3 3s 1 forwards 4s;
+                background-image:url(img/selva.jpg);
+                background-size: cover;
+            }
+
+            @keyframes marco3{
+                0%{
+                    top: -300px;
+                    left: 400px;
+                    transform: rotateY(180deg);
+                }
+                50%{
+                    top: 300px;
+                    left: 400px;
+                }
+                100%{
+                    top: 0px;
+                    left: 400px;
+                }
+            }
+
+            .marco4{
+                width: 200px;
+                height: 300px;
+                position:absolute;
+                top:300px;
+                left: 600px;
+                animation: marco4 3s 1 forwards 6s;
+                background-image:url(img/sierra.jpg);
+                background-size: cover;
+            }
+
+            @keyframes marco4{
+                0%{
+                    top: -300px;
+                    left: 600px;
+                    transform: rotateY(180deg);
+                }
+                50%{
+                    top: 300px;
+                    left: 600px;
+                }
+                100%{
+                    top: 0px;
+                    left: 600px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="marco1"></div>
+            <div class="marco2"></div>
+            <div class="marco3"></div>
+            <div class="marco4"></div>
+        </div>
+        <button onclick="volver()" class="btn-volver">
+            VOLVER AL INICIO
+        </button> 
+        <script>
+            function volver() {
+                window.location.href = "../index.html";
+            }
+        </script>
+    </body>
+</html>
