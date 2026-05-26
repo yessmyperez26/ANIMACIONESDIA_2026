@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Parallax</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+body{
+   background-color: burlywood;
+}
+.contenedor{
+    position:relative;
+/*largo*/
+    width:1000px;
+/*altura*/
+    height:500px;
+    border : 1px solid black;
+    background-image: url(img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    margin:0 auto;
+}
+.btn-volver{
+    display: block;
+    margin: 30px auto;
+    background: #ff66b2;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 0 10px #ff99cc;
+    transition: 0.3s;
+}
+.btn-volver:hover{
+    background: #ff99cc;
+    transform: scale(1.05);
+}
+.raton{
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 250px;
+    left: 0px;
+    position: absolute;
+    background-image: url(img/ratonxd.png);
+    z-index: 1;
+    background-size: cover;
+    animation: raton 6s 1 forwards;
+}
+@keyframes raton{
+    0%{
+        left: -200px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+</style>
+</head>
+<body>
+<audio autoplay loop hidden>
+    <source src="img/rata.mp3" type="audio/mpeg">
+</audio>
+<div class="contenedor">
+    <div class="raton"></div>
+</div>
+<button onclick="volver()" class="btn-volver">VOLVER AL INICIO</button>
+<script>
+function volver() {
+    window.location.href = "../index.html";
+}
+</script>
+</body>
+</html>
