@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Animacion de Abejitas</title>
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+            }
+            .contenedor{
+                width: 800px;
+                height: 300px;
+                border:1px solid black;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+            }
+            .btn-volver{
+                display: block;
+                margin: 30px auto;
+                background: #ff66b2;
+                color: white;
+                border: none;
+                padding: 12px 22px;
+                border-radius: 12px;
+                cursor: pointer;
+                font-size: 16px;
+                box-shadow: 0 0 10px #ff99cc;
+                transition: 0.3s;
+            }
+
+            .btn-volver:hover{
+                background: #ff99cc;
+                transform: scale(1.05);
+            }
+            .cuadrito{
+                width: 100px;
+                height: 100px;  
+                position:absolute;
+                top:0px;
+                left:0px;
+                animation: cuadrito 4s infinite;
+            }
+            .cuadrito2{
+                width: 100px;
+                height: 100px;  
+                position:absolute;
+                top:0px;
+                left:0px;
+                animation: cuadrito 5s infinite;
+            }
+            .abeja{
+                position: absolute;
+                width: 100%;
+                z-index: 0;
+            }
+            
+            .abeja2{
+                position: absolute;
+                width: 88%;
+                left: 100px;
+                z-index: 0;
+            }
+            @keyframes cuadrito2{
+                 0%{
+                    top:0px;
+                    left:-100px;
+                    rotate:45deg;
+                }
+                50%{
+                    top:200px;
+                    left:350px;
+                    rotate:0deg;
+                }
+                100%{
+                    top:0px;
+                    left:800px;
+                    rotate:45deg;
+                }   
+            }
+            @keyframes cuadrito{
+                0%{
+                    top:0px;
+                    left:-100px;
+                    rotate:45deg;
+                }
+                50%{
+                    top:200px;
+                    left:350px;
+                    rotate:0deg;
+                }
+                100%{
+                    top:0px;
+                    left:800px;
+                    rotate:45deg;
+                }   
+             }
+            
+             
+            .pradera{
+                position:absolute;
+                top: -450px;
+                left: 0px;
+                width: 100%;
+                z-index: -1;
+            }
+            .cielo{
+                position:absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                z-index: -2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="cuadrito">
+                <img class="abeja" src="img/source.gif" alt="">
+            </div>
+            <div class="cuadrito2">
+                <img class="abeja2" src="img/source.gif" alt="">
+            </div>
+            <img class="pradera" src="img/pradera.png" alt="">
+            <img class="cielo" src="img/cielo.png" alt="">
+        </div>
+        <button onclick="volver()" class="btn-volver">
+            VOLVER AL INICIO
+        </button>
+        <script>
+            function volver() {
+                window.location.href = "../index.html";
+            }
+        </script>
+    </body>
+</html>
