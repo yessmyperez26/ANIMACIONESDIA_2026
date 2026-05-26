@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CLIPPATH SEMANA 6 </title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: 50px auto;
+    background: white;
+    overflow: hidden;
+    border: 2px solid black;
+}
+.personaje{
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: caminar 8s linear infinite;
+}
+@keyframes caminar{
+    0%{ transform: translateX(0); }
+    100%{ transform: translateX(550px); }
+}
+.btn-volver{
+    display: block;
+    margin: 30px auto;
+    background: #ff66b2;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 0 10px #ff99cc;
+    transition: 0.3s;
+}
+.btn-volver:hover{
+    background: #ff99cc;
+    transform: scale(1.05);
+}
+.fondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/bosque.jpg); 
+    background-size: cover;
+    background-position: center;
+}
+.sombrero{
+    position: absolute;
+    width: 140px;
+    height: 100px;
+    top: 0px;
+    left: 130px;
+    background-image: url(img/sombrero.avif);
+    background-size: cover;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 5;
+}
+.cabeza{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 65px;
+    left: 140px;
+    background-image: url(img/cara.png);
+    background-size: cover;
+    clip-path: circle(50%);
+    z-index: 4;
+}
+.cuerpo{
+    position: absolute;
+    width: 80px;
+    height: 150px;
+    top: 175px;
+    left: 160px;
+    background-image: url(img/cuerpo.webp);
+    background-size: cover;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    animation: balanceo 0.6s infinite;
+}
+@keyframes balanceo{
+    0%{ transform: rotate(0deg); }
+    50%{ transform: rotate(2deg); }
+    100%{ transform: rotate(0deg); }
+}
+.brazo{
+    position: absolute;
+    width: 220px;
+    height: 140px;
+    top: 150px;
+    left: 90px;
+    background-image: url(img/brazo.avif);
+    background-size: cover;
+    clip-path: polygon(21% 40%, 78% 40%, 100% 50%, 77% 68%, 21% 68%, 0% 50%);
+    transform-origin: 20% 50%; 
+    animation: moverBrazo 2s infinite ease-in-out;
+}
+@keyframes moverBrazo{
+    0%{ transform: rotate(0deg); }
+    50%{ transform: rotate(-20deg); }
+    100%{ transform: rotate(0deg); }
+}
+
+.zapato1{
+    position: absolute;
+    width: 70px;
+    height: 50px;
+    top: 325px; 
+    left: 110px;
+    background-image: url(img/pies1.png);
+    clip-path: ellipse(50% 50%);
+    animation: paso1 0.6s infinite;
+}
+.zapato2{
+    position: absolute;
+    width: 70px;
+    height: 50px;
+    top: 325px; 
+    left: 198px;
+    background-image: url(img/pie2.png);
+    clip-path: ellipse(50% 50%);
+    animation: paso2 0.6s infinite;
+}
+@keyframes paso1{
+    0%{ transform: translateY(0); }
+    50%{ transform: translateY(-10px); }
+    100%{ transform: translateY(0); }
+}
+@keyframes paso2{
+    0%{ transform: translateY(-10px); }
+    50%{ transform: translateY(0); }
+    100%{ transform: translateY(-10px); }
+}
+.cono,
+.helado1,
+.helado2,
+.helado3{
+    position: absolute;
+    background-size: cover;
+    animation: flotarHelado 2s ease-in-out infinite;
+}
+@keyframes flotarHelado{
+    0%{ transform: translateY(0); }
+    50%{ transform: translateY(-12px); }
+    100%{ transform: translateY(0); }
+}
+.cono{
+    width: 50px;
+    height: 80px;
+    top: 215px;
+    left: 285px;
+    background-image: url(img/cono.avif);
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+.helado1{
+    width: 45px;
+    height: 45px;
+    top: 185px;
+    left: 270px;
+    background-image: url(img/helado1.webp);
+    clip-path: circle(50%);
+}
+.helado2{
+    width: 45px;
+    height: 45px;
+    top: 185px;
+    left: 305px;
+    background-image: url(img/helado2.jpg);
+    clip-path: circle(50%);
+}
+.helado3{
+    width: 45px;
+    height: 45px;
+    top: 160px;
+    left: 287px;
+    background-image: url(img/helado3.jpg);
+    clip-path: circle(50%);
+}
+</style>
+</head>
+<body>
+<div class="contenedor">
+    <div class="fondo"></div>
+    <div class="personaje">
+        <div class="sombrero"></div>
+        <div class="cabeza"></div>
+        <div class="brazo"></div>
+        <div class="cuerpo"></div>
+        <div class="zapato1"></div>
+        <div class="zapato2"></div>
+        <div class="cono"></div>
+        <div class="helado1"></div>
+        <div class="helado2"></div>
+        <div class="helado3"></div>
+    </div>
+</div>
+<button onclick="volver()" class="btn-volver">VOLVER AL INICIO</button>
+<script>
+function volver() {
+    window.location.href = "../index.html";
+}
+</script>
+</body>
+</html>
