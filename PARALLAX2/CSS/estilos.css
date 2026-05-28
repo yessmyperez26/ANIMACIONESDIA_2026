@@ -1,0 +1,133 @@
+body{
+    background-color: black;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.btn-volver{
+    display: block;
+    margin: 30px auto;
+    background: #ff66b2;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 0 10px #ff99cc;
+    transition: 0.3s;
+}
+.btn-volver:hover{
+    background: #ff99cc;
+    transform: scale(1.05);
+}
+.contenedor{
+    width: 600px;
+    height: 800px;
+    border: 1px solid black;
+    margin: 0 auto;/*centra el contenedor*/
+    position:relative;
+    overflow: hidden;
+}
+.Cielo{
+    position:absolute;
+    left:-200px;
+    top:-150px;
+    filter: blur(5px);
+    animation: Cielo 30s 1 forwards;
+}
+@keyframes Cielo{
+    from{
+        scale: 100%;
+        filter: blur(5px);
+    }
+    to{
+        scale: 130%;
+    }
+}
+.Montaña{
+    position: absolute;
+    left: -600px;
+    filter: blur(5px);
+    animation: Montaña 30s 1 forwards;
+}
+@keyframes Montaña{
+    form{
+        top:0px;
+        scale: 100%;
+    }
+    to{
+        top: -30px;
+        scale:105%;
+    }
+}
+.Persona{
+    position: absolute;
+    width: 800px;
+    left: -150px;
+    top: 300px;
+    animation: Persona 30s 1 forwards;
+}
+@keyframes Persona{
+    from{
+       scale: 80%;
+    }
+    to{
+        scale: 100%;
+    }
+}
+.Neblina{
+    position: absolute;
+    width: 1000px;
+    left: -150px;
+    top:400px;
+    animation: Neblina 30s 1 forwards;
+}
+@keyframes Neblina{
+    from{
+       left: -1000px;
+    }
+    to{
+      left: 100%;
+    }
+}
+.title{
+    position: absolute;
+    top: 120px;
+    left: -150px;
+    z-index: 10;
+    animation: title 8s forwards;
+}
+@keyframes title{
+    0%{
+        scale: 0.7;
+    }
+    100%{
+        scale: 1;
+    }
+}
+.title svg{
+    width: 800px;
+    height: 600px;
+}
+svg path{
+    fill: transparent;
+    stroke: #0a0a0a;
+    stroke-width: 12;
+    stroke-dasharray: 12000;
+    stroke-dashoffset: 12000;
+    animation: title 6s forwards;
+}
+@keyframes title{
+    0%{
+        stroke-dashoffset: 12000;
+    }
+    80%{
+        fill: transparent;
+    }
+    100%{
+        fill: #680d74;
+        stroke-dashoffset: 0;
+    }
+}
