@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    background: url("../fondo.jpg") repeat center;
+    min-height:100vh;
+}
+
+.titulo{
+    text-align:center;
+    margin-top:50px;
+    font-size:50px;
+    color:#ffd6f6;
+    text-shadow:0 0 14px #050505;
+    font-family:"Paytone One", sans-serif;
+}
+.contenedor{
+    text-align:center;
+    margin-top:50px;
+}
+button{
+    width:250px;
+    height:50px;
+    margin:10px;
+    border:2px solid black;
+    border-radius:25px;
+    font-size:18px;
+    background-color:#d588af;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+button:hover{
+    background:#ffb6d9;
+    transform:scale(1.08);
+    box-shadow:0 0 15px #ff99cc;
+}
